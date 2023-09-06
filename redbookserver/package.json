@@ -1,0 +1,53 @@
+{
+  "name": "RedBookServer",
+  "version": "1.0.0",
+  "description": "小红书仿写服务端",
+  "localHost": "http://10.10.40.225",
+  "private": true,
+  "egg": {
+    "typescript": true
+  },
+  "scripts": {
+    "start": "egg-scripts start --daemon --title=egg-server-RedBookServer",
+    "stop": "egg-scripts stop --title=egg-server-RedBookServer",
+    "dev": "egg-bin dev",
+    "test-local": "egg-bin test -p",
+    "test": "npm run lint -- --fix && npm run test-local",
+    "cov": "egg-bin cov -p",
+    "ci": "npm run lint && npm run cov && npm run tsc && npm run clean",
+    "lint": "eslint . --ext .ts --cache",
+    "tsc": "tsc",
+    "clean": "tsc -b --clean"
+  },
+  "dependencies": {
+    "@eggjs/tegg": "^3.5.2",
+    "@eggjs/tegg-aop-plugin": "^3.5.2",
+    "@eggjs/tegg-config": "^3.2.3",
+    "@eggjs/tegg-controller-plugin": "^3.5.2",
+    "@eggjs/tegg-eventbus-plugin": "^3.5.2",
+    "@eggjs/tegg-plugin": "^3.5.2",
+    "@eggjs/tegg-schedule-plugin": "^3.5.2",
+    "egg": "^3.15.0",
+    "egg-scripts": "^2.17.0",
+    "egg-tracer": "^2.0.0"
+  },
+  "devDependencies": {
+    "@eggjs/tsconfig": "1",
+    "@types/mocha": "10",
+    "@types/node": "18",
+    "egg-bin": "6",
+    "egg-mock": "5",
+    "eslint": "8",
+    "eslint-config-egg": "12",
+    "typescript": "4"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "大公爵",
+  "license": "MIT"
+}
